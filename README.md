@@ -26,10 +26,10 @@ locale  # verify settings
 sudo add-apt-repository universe
 
 #### Authorize the GPG key with apt.
->sudo apt update && sudo apt install curl gnupg lsb-releasesudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+>sudo apt update && sudo apt install curl gnupg lsb-releasesudo curl -sSLhttps://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 #### Adding the repository to the sources list.
-> echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release &&echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+> echo"debarch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpghttp://packages.ros.org/ros2/ubuntu$(source /etc/os-release &&echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
 ### Install ROS 2 packages
 
